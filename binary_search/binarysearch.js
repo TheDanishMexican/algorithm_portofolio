@@ -1,20 +1,6 @@
-"use strict";
+import binarySearchRecursive from "./binarysearch_recursive.js";
 
-window.addEventListener('load', start);
 
-const values = [21, 22, 23, 25, 27, 28, 29, 31, 32, 34, 35];
-
-function start() {
-    console.log('App started');
-
-    let result = binarySearch(32, values);
-
-    if (result !== -1) {
-        console.log(`The searched number was found at index: ${result}`);
-    } else {
-        console.log("The number does not exist");
-    }
-}
 
 function binarySearch(search, values) {
     let min = 0;
@@ -26,7 +12,7 @@ function binarySearch(search, values) {
         let comparison = compare(values[middle], search);
 
         if (comparison === 0) {
-            return middle;
+            return console.log(`The searched number was found at index: ${middle}`);
         } else if (comparison < 0) {
             min = middle + 1;
         } else {
@@ -46,3 +32,9 @@ function compare(value1, value2) {
         return -1;
     }
 }
+
+window.binarySearchRecursive = binarySearchRecursive;
+
+window.binarySearch = binarySearch;
+
+window.compare = compare;
