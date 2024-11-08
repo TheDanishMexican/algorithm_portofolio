@@ -24,9 +24,7 @@ function insertionSortShift(arr) {
     return arr;
 }
 
-function insertionSortSwap(arr) {
 
-}
 
 window.list = list;
 window.insertionSortSwap = insertionSortSwap;
